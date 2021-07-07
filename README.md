@@ -31,7 +31,11 @@
 ランニング初心者が経験者にアドバイスを聞きたい時
 
 ## 設計書
-ER図、テーブル定義書、アプリケーション詳細設計　後日追加
+ER図: https://app.diagrams.net/#G15NI2rQzfsR4LO_75x-ddZLXAygAejuW3  
+
+テーブル定義書: https://docs.google.com/spreadsheets/d/11Av4pgtmxOFNXxmfSLAZMe0wSC-RXQvVQRjwrWAfn8U/edit?usp=sharing  
+
+アプリケーション詳細設計　後日追加
 
 
 ## チャレンジ要素一覧
