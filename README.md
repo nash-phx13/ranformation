@@ -31,11 +31,11 @@
 ランニング初心者が経験者にアドバイスを聞きたい時
 
 ## 設計書
-ER図: https://app.diagrams.net/#G15NI2rQzfsR4LO_75x-ddZLXAygAejuW3  
+[ER図](https://app.diagrams.net/#G15NI2rQzfsR4LO_75x-ddZLXAygAejuW3)  
 
-テーブル定義書: https://docs.google.com/spreadsheets/d/11Av4pgtmxOFNXxmfSLAZMe0wSC-RXQvVQRjwrWAfn8U/edit?usp=sharing  
+[テーブル定義書](https://docs.google.com/spreadsheets/d/11Av4pgtmxOFNXxmfSLAZMe0wSC-RXQvVQRjwrWAfn8U/edit?usp=sharing)  
 
-[アプリケーション詳細設計]：https://docs.google.com/spreadsheets/d/119I87cCmRWiXBs1AKjbf6TC_dxEdTmRSzVoR2vXiWM4/edit?usp=sharing
+[アプリケーション詳細設計](https://docs.google.com/spreadsheets/d/119I87cCmRWiXBs1AKjbf6TC_dxEdTmRSzVoR2vXiWM4/edit?usp=sharing)
 
 
 ## チャレンジ要素一覧
