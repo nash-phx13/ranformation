@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  genre: MyString
+  body: MyText
+  image: 1
+  like_count: 1
+  comment_count: 1
+
+two:
+  title: MyString
+  genre: MyString
+  body: MyText
+  image: 1
+  like_count: 1
+  comment_count: 1
