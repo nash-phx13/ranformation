@@ -4,6 +4,7 @@ before_action :check_correct_user, only: [:edit, :update, :destroy]
 
   def show
     @run = Run.find(params[:id])
+    @run_comment = RunComment.new
   end
 
   def index

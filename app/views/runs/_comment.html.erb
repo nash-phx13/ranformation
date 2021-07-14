@@ -1,0 +1,21 @@
+<table>
+  <% @run.run_comments.each do |run_comment| %>
+    <% run_comment_user = run_comment.user %>
+    <tr>
+    	<td>
+    		<%= link_to user_path(run_comment_user), class: "user_#{run_comment_user.id}" do %>
+      		<%= attachment_image_tag run_comment_user, :profile_image, :fill, 50, 50, fallback: "no_image.jpg", size: "50x50" %><br>
+      		<%= run_comment_user.name %>
+    		<% end %>
+    	</td>
+    	<td><%= run_comment.comment %></td>
+    	<% if current_user == run_comment_user %>
+      	<td><%= link_to 'Destroy', run_run_comment_path(run_comment.run_id,run_comment.id), class: 'btn-sm btn-danger', method: :delete %></td>
+    	<% end %>
+    </tr>
+  <% end %>
+</table>
+<%= form_with model:[@run,@run_comment], local: true do |f| %>
+  <%= f.text_area :comment, size:"90x5" %><br>
+  <%= f.submit '送信'%>
+<% end %>

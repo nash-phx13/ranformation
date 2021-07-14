@@ -4,7 +4,7 @@
       <h2>User info</h2>
       <%= render 'users/info', user: @run.user %>
       <h2 class="mt-3">New run'srecode</h2>
-      <%= render 'form', run: Run.new %>
+      <%= render 'runs/form', run: Run.new %>
     </div>
     <div class='col-md-8 offset-md-1'>
   		<h2>Run detail</h2>
@@ -17,6 +17,8 @@
           </td>
           <td><%= link_to @run.title, run_path(@run) %></td>
           <td><%= @run.body %></td>
+          <td class="favorite-btn"><%= render "likes/like-btn", run: @run %></td>
+          <td>コメント数: <%= @run.run_comments.count %></td>
           <% if @run.user == current_user %>
             <td><%= link_to 'Edit', edit_run_path(@run), class: "btn btn-sm btn-success edit_run_#{@run.id}" %></td>
             <td><%= link_to 'Destroy', run_path(@run), method: :delete, data: { confirm: '本当に消しますか？' }, class: "btn btn-sm btn-danger destroy_run_#{@run.id}"%></td>
