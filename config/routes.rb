@@ -5,7 +5,15 @@ devise_for :users
 
 root to: 'homes#top'
 get '/home/about' => 'homes#about'
-resources :runs, only: [:index, :show, :edit, :create, :destroy, :update]
+#記事の投稿、いいね、コメント
+resources :runs, only: [:index, :show, :edit, :create, :destroy, :update]do
+  resource :likes, only: [:create, :destroy]
+  resources :run_comments, only: [:create, :destroy]
+end
+
+#ユーザー情報
 resources :users, only: [:index, :show, :edit, :update]
+
+#検索機能
 get '/search', to: 'search#search'
 end
