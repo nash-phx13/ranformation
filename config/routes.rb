@@ -8,6 +8,7 @@ get '/home/about' => 'homes#about'
 resources :runs, only: [:index, :show, :edit, :create, :destroy, :update]do
   resource :likes, only: [:create, :destroy]
   resources :run_comments, only: [:create, :destroy]
+  resources :reviews, only: [:create, :edit, :update, :destroy]
 end
 
 #ユーザー情報

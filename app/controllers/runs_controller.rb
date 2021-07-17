@@ -42,7 +42,7 @@ before_action :check_correct_user, only: [:edit, :update, :destroy]
   private
 
   def run_params
-    params.require(:run).permit(:title, :body)
+    params.require(:run).permit(:title, :body ,:evaluation)
   end
 
   def check_correct_user

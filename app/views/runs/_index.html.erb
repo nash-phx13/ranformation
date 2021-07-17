@@ -19,7 +19,17 @@
         <td><%= run.body %></td>
         <td class="favorite-btn"><%= render "likes/like-btn", run: run %></td>
         <td>コメント数: <%= run.run_comments.count %></td>
+        <td class="run-evaluation" data-score="<%= run.evaluation %>"></td>
       </tr>
     <% end %>
   </tbody>
 </table>
+<script>
+  $('.run-evaluation').raty({
+    readOnly: true,
+    score: function() {
+      return $(this).attr('data-score');
+    },
+    path: '/assets/'
+  });
+</script>
