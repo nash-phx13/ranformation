@@ -8,7 +8,6 @@ class User < ApplicationRecord
   has_many :likes, dependent: :destroy                    #いいねと1対N
 	has_many :run_comments, dependent: :destroy           #投稿記事へのコメントと1対N
   attachment :profile_image, destroy: false
-
   validates :name, length: { minimum: 2, maximum: 20 }, uniqueness: true
   validates :introduction, length: { maximum: 50 }
 

@@ -10,6 +10,7 @@
     		<% end %>
     	</td>
     	<td><%= run_comment.comment %></td>
+    	<td class="run_comments-evaluation" data-score="<%= run_comment.evaluation %>"></td>
     	<% if current_user == run_comment_user %>
       	<td><%= link_to 'Destroy', run_run_comment_path(run_comment.run_id,run_comment.id), class: 'btn-sm btn-danger', method: :delete %></td>
     	<% end %>
@@ -18,5 +19,24 @@
 </table>
 <%= form_with model:[@run,@run_comment], local: true do |f| %>
   <%= f.text_area :comment, size:"90x5" %><br>
-  <%= f.submit '送信'%>
+  <div id="evaluate_stars">
+    <label>評価</label>
+  </div>
+  <div class="actions">
+    <%= f.submit '送信'%>
+  </div>
 <% end %>
+
+<script>
+  $(function(){
+    
+    $('#evaluate_stars').raty({
+      size: 36,
+      starOn: "<%= asset_path('star-on.png') %>",
+      starOff: "<%= asset_path('star-off.png') %>",
+      starHalf: "<%= asset_path('star-half.png') %>",
+      scoreName: 'run_comment[evaluation]' //登録するモデル名とカラム名を記述
+    });
+  });
+</script>
+

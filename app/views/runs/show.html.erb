@@ -19,6 +19,7 @@
           <td><%= @run.body %></td>
           <td class="favorite-btn"><%= render "likes/like-btn", run: @run %></td>
           <td>コメント数: <%= @run.run_comments.count %></td>
+          
           <% if @run.user == current_user %>
             <td><%= link_to 'Edit', edit_run_path(@run), class: "btn btn-sm btn-success edit_run_#{@run.id}" %></td>
             <td><%= link_to 'Destroy', run_path(@run), method: :delete, data: { confirm: '本当に消しますか？' }, class: "btn btn-sm btn-danger destroy_run_#{@run.id}"%></td>
@@ -30,3 +31,13 @@
   </div>
 </div>
 
+
+<script>
+  $('.run_comments-evaluation').raty({
+    readOnly: true,
+    score: function() {
+      return $(this).attr('data-score');
+    },
+    path: '/assets/'
+  });
+</script>

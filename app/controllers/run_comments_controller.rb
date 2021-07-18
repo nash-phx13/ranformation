@@ -22,6 +22,6 @@ before_action :authenticate_user!
 
 	private
 	def run_comment_params
-		params.require(:run_comment).permit(:comment)
+		params.require(:run_comment).permit(:comment,:evaluation)
 	end
 end
