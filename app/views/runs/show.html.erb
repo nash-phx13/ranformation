@@ -17,8 +17,12 @@
           </td>
           <td><%= link_to @run.title, run_path(@run) %></td>
           <td><%= @run.body %></td>
+            <td><%= attachment_image_tag(@run, :image, size: '100x220', fallback: 'no_image.jpg') %></td>
+          
+     
           <td class="favorite-btn"><%= render "likes/like-btn", run: @run %></td>
           <td>コメント数: <%= @run.run_comments.count %></td>
+          <!--<td class="run_comments-evaluation" data-score="<%#= @run_comment.evaluation %>">平均を</td>--> 
           
           <% if @run.user == current_user %>
             <td><%= link_to 'Edit', edit_run_path(@run), class: "btn btn-sm btn-success edit_run_#{@run.id}" %></td>

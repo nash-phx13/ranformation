@@ -66,8 +66,7 @@ group :production do
   gem 'mysql2'
 end
 
-
-gem'devise'
+gem 'devise'
 gem "refile", require: "refile/rails", github: 'manfe/refile'
 gem "refile-mini_magick"
 gem 'bootstrap', '~> 4.5'
@@ -76,3 +75,6 @@ gem 'kaminari'
 gem 'font-awesome-sass'
 gem 'enum_help'
 gem 'rails-i18n'
+
+gem 'pry-byebug', group: :development
+gem 'rubocop-airbnb'

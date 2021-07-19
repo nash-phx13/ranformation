@@ -1,6 +1,6 @@
 class RunsController < ApplicationController
-before_action :authenticate_user!
-before_action :check_correct_user, only: [:edit, :update, :destroy]
+  before_action :authenticate_user!
+  before_action :check_correct_user, only: [:edit, :update, :destroy]
 
   def show
     @run = Run.find(params[:id])
@@ -42,7 +42,7 @@ before_action :check_correct_user, only: [:edit, :update, :destroy]
   private
 
   def run_params
-    params.require(:run).permit(:title, :body )
+    params.require(:run).permit(:title, :body, { images: [] })
   end
 
   def check_correct_user
