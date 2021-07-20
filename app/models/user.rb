@@ -16,6 +16,10 @@ class User < ApplicationRecord
   has_many :followers, through: :reverse_of_relationships, source: :follower # 被フォロー関係を通じて参照→自分をフォローしている人
   has_many :followings, through: :relationships, source: :followed # 与フォロー関係を通じて参照→自分がフォローしている人
 
+  def liked_by?(run_id)
+   likes.where(run_id: run_id).exists?
+  end
+
   def follow(user_id) # フォローする
     relationships.create(followed_id: user_id) # createメソッドはnewとsaveを合わせた挙動
   end

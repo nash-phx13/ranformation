@@ -9,7 +9,7 @@
   </thead>
   <!--投稿内容一覧-->
   <tbody>
-    <% runs.each do |run| %>
+    <% @runs.each do |run| %>
       <tr>
         <td><%= link_to user_path(run.user) do %>
           <%= attachment_image_tag(run.user, :profile_image, :fill, 50, 50, fallback: "no-image-icon.jpg") %>
@@ -17,9 +17,10 @@
         </td>
         <td><%= link_to run.title, run_path(run), class: "run_#{run.id}" %></td>
         <td><%= run.body %></td>
-        <td class="favorite-btn"><%= render "likes/like-btn", run: run %></td>
+        <td id="likes_buttons_<%= run.id %>">
+          <%= render partial: 'likes/like-btn', locals:{run: run} %></td>
         <td>コメント数: <%= run.run_comments.count %></td>
-        
+
       </tr>
     <% end %>
   </tbody>
