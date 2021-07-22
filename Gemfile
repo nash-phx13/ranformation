@@ -78,3 +78,6 @@ gem 'rails-i18n'
 
 gem 'pry-byebug', group: :development
 gem 'rubocop-airbnb'
+
+gem 'seed-fu'
+gem 'order_as_specified'

@@ -5,30 +5,41 @@ class RunsController < ApplicationController
   def show
     @run = Run.find(params[:id])
     @run_comment = RunComment.new
+    @run_tags = @run.tags
   end
 
   def index
     @runs = Run.all
-    @run = Run.new
+    @run = Run.new 
+    @tag_list = Tag.all
   end
 
   def create
     @run = Run.new(run_params)
     @run.user_id = current_user.id
+    
+    tag_list = params[:run][:tag_name].split(nil)
     if @run.save
-      redirect_to run_path(@run), notice: "You have created run recode successfully."
+       @run.save_tag(tag_list)      
+       redirect_to run_path(@run), notice: "You have created run recode successfully."
     else
       @runs = Run.all
       render 'index'
     end
   end
+  
+
 
   def edit
+    @run =Run.find(params[:id])
   end
 
   def update
+    @run =Run.find(params[:id])
+    tag_list = params[:run][:tag_name]
     if @run.update(run_params)
-      redirect_to run_path(@run), notice: "You have updated run recode successfully."
+       @run.save_tag(tag_list)
+       redirect_to run_path(@run), notice: "You have updated run recode successfully."
     else
       render "edit"
     end
@@ -39,10 +50,16 @@ class RunsController < ApplicationController
     redirect_to runs_path
   end
 
+  def search
+    @tag_list = Tag.all  #こっちの投稿一覧表示ページでも全てのタグを表示するために、タグを全取得
+    @tag = Tag.find(params[:tag_id])  #クリックしたタグを取得
+    @runs = @tag.runs.all           #クリックしたタグに紐付けられた投稿を全て表示
+  end
+
   private
 
   def run_params
-    params.require(:run).permit(:title, :body, { images: [] })
+    params.require(:run).permit(:title, :body, {tag_ids:[] })
   end
 
   def check_correct_user

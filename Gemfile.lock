@@ -164,6 +164,8 @@ GEM
     nokogiri (1.11.7)
       mini_portile2 (~> 2.5.0)
       racc (~> 1.4)
+    order_as_specified (1.7)
+      activerecord (>= 5.0.0)
     orm_adapter (0.5.0)
     parallel (1.20.1)
     parser (3.0.2.0)
@@ -269,6 +271,9 @@ GEM
       sprockets (> 3.0)
       sprockets-rails
       tilt
+    seed-fu (2.3.9)
+      activerecord (>= 3.1)
+      activesupport (>= 3.1)
     selenium-webdriver (3.142.7)
       childprocess (>= 0.5, < 4.0)
       rubyzip (>= 1.2.2)
@@ -335,6 +340,7 @@ DEPENDENCIES
   kaminari
   listen (>= 3.0.5, < 3.2)
   mysql2
+  order_as_specified
   pry-byebug
   puma (~> 3.11)
   rails (~> 5.2.5)
@@ -343,6 +349,7 @@ DEPENDENCIES
   refile-mini_magick
   rubocop-airbnb
   sass-rails (~> 5.0)
+  seed-fu
   selenium-webdriver
   spring
   spring-watcher-listen (~> 2.0.0)

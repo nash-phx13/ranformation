@@ -16,6 +16,11 @@ Rails.application.routes.draw do
     get 'followings' => 'relationships#followings', as: 'followings'
     get 'followers' => 'relationships#followers', as: 'followers'
   end
+  
+  #タグ付け
+  resources :tags do
+    get 'runs', to: 'runs#search'
+  end
 
   # 検索機能
   get '/search', to: 'search#search'

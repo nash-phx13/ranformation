@@ -17,10 +17,36 @@
 @import 'font-awesome-sprockets';
 @import 'font-awesome';
 
+header {
+  font-family: 'Kosugi Maru', sans-serif;
+}
 
 body {
- font-family: 'Sniglet','Kosugi Maru', cursive;
+  font-family: 'Kosugi Maru', sans-serif;
+  background-color: #faf0e6;
 }
+
+footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+
+  font-family: 'Caveat', cursive;
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+}
+
+// TOPページ
+.box {
+   background-image: url('cafewall01.jpg');
+   background-size: cover;
+   background-repeat: no-repeat;
+   height: 70vh;
+   width: 100%;
+   position: relative;
+   background-position: center;
+}
+
 
 .logo {
   margin-top : 5px;
@@ -100,3 +126,4 @@ div {
   font-weight: bold;
   margin-bottom: 15px;
 }
+
