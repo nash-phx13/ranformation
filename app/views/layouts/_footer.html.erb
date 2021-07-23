@@ -7,13 +7,7 @@
 
       <div class='mx-auto text-right'>
         <ul class='navbar-nav ml-auto'>
-        <!--顧客ログイン時-->
-        <% if user_signed_in? %>
-          <li><%= link_to "Topへ", user_path(current_user),class:"fas fa-home nav-link text-light" %></li>
-        <!--顧客未ログイン時-->
-        <% else %>
          <li><%= link_to "Topへ", root_path,class:"fas fa-home nav-link text-light" %></li>
-         <% end %>
        </ul>
       </div>
 

@@ -17,8 +17,16 @@
 @import 'font-awesome-sprockets';
 @import 'font-awesome';
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
 header {
   font-family: 'Kosugi Maru', sans-serif;
+  background-color: #ffa600;
 }
 
 body {

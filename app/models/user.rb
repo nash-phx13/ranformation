@@ -16,6 +16,11 @@ class User < ApplicationRecord
   has_many :followers, through: :reverse_of_relationships, source: :follower # 被フォロー関係を通じて参照→自分をフォローしている人
   has_many :followings, through: :relationships, source: :followed # 与フォロー関係を通じて参照→自分がフォローしている人
 
+   #is_activeが無効だとログインできない
+  def active_for_authentication?
+    super && (self.is_active === false)
+  end
+  
   def liked_by?(run_id)
    likes.where(run_id: run_id).exists?
   end

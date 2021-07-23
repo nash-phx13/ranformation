@@ -24,10 +24,24 @@ class UsersController < ApplicationController
     end
   end
 
+  #顧客退会画面
+  def unsubscribe
+    @user = User.find_by( params[:id])
+  end
+
+  #顧客退会処理
+  def withdraw
+    @user = User.find_by( params[:id])
+    @user.update(is_active: false)
+    reset_session
+    redirect_to root_path
+    flash[:notice]='またのご利用お待ちしております。'
+  end
+
   private
 
   def user_params
-    params.require(:user).permit(:name, :introduction, :profile_image)
+    params.require(:user).permit(:name, :introduction, :profile_image,:is_active)
   end
 
   def check_correct_user

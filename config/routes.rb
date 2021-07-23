@@ -12,6 +12,9 @@ Rails.application.routes.draw do
 
   # ユーザー情報
   resources :users, only: [:index, :show, :edit, :update] do
+    get 'unsubscribe' => 'users#unsubscribe', as: 'unsubscribe'
+    patch 'withdraw' => 'users#withdraw', as: 'withdraw'
+    put '/users/:id/withdraw' => 'users#withdraw'              
     resource :relationships, only: [:create, :destroy]
     get 'followings' => 'relationships#followings', as: 'followings'
     get 'followers' => 'relationships#followers', as: 'followers'
