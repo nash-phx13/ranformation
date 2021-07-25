@@ -44,7 +44,12 @@ footer {
       -ms-text-size-adjust: 100%;
 }
 
-// TOPページ
+.fa, .fas {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 600;
+  line-height: normal;
+}
+
 .box {
    background-image: url('cafewall01.jpg');
    background-size: cover;
@@ -68,15 +73,6 @@ footer {
   box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.15);
 }
 
-
-
-
-.fa, .fas {
-  font-family: 'Font Awesome 5 Free';
-  font-weight: 600;
-  line-height: normal;
-}
-
 #notice {
   color: green;
 }
@@ -96,6 +92,31 @@ div {
   display: flex;
   justify-content: center;
 }
+
+//topページ
+.top-text {
+  line-height: 100%;
+}
+
+.logo-top {
+  size: 200%;
+  margin-top: 100px;
+}
+
+.box-top{
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    color: #474747;
+    background: whitesmoke;/*背景色*/
+    border-left: double 7px #ffa600;/*左線*/
+    border-right: double 7px #ffa600;/*右線*/
+}
+
+.carousel {
+   width: 50%;
+   margin: auto;
+}
+
 
 // アバウトページ
 .about-top-title {
@@ -135,3 +156,11 @@ div {
   margin-bottom: 15px;
 }
 
+//ユーザーページ
+
+  .main_group {
+  padding: 15px;
+  border-radius:  7px;
+  border: 5px ridge #31A9EE;
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.25);
+}

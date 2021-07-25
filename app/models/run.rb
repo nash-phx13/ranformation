@@ -16,9 +16,7 @@ class Run < ApplicationRecord
 
 # タグ付け
   def save_tag(sent_tags)
-    current_tags = self.tags.pluck(:tag_name) 
 
-    
   end
 
 

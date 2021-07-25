@@ -1,39 +1,42 @@
-<h2>Runformationの3つの特徴</h2>
-<div class="about-box">
-  <div class="about-content">
-    <div class="about-title">
-      ①SNS機能
+  <h2>Runformationの3つの特徴</h2>
+  <div class="about-box">
+    <div class="about-content">
+      <div class="about-title">
+        ①SNS機能
+      </div>
+      <i class="fas fa-pencil-alt fa-5x"></i>
+      <div class="about-body">
+        <p>あなたの経験を投稿しよう！</p>
+        <p>距離や走った場所、行った練習方法等</p>
+        <p>記録を残しておこう！</p>
+      </div>
     </div>
-    <i class="fas fa-pencil-alt fa-5x"></i>
-    <div class="about-body">
-      <p>あなたの経験を投稿しよう！</p>
-      <p>距離や走った場所、行った練習方法等</p>
-      <p>記録を残しておこう！</p>
+    <div class="about-content">
+      <div class="about-title">
+       ②レビューを受けられる
+      </div>
+      <i class="far fa-laugh-wink fa-5x"></i>
+      <div class="about-body">
+       <p>フィードバックをもらえる！！</p>
+       <p>コメントによる情報共有</p>
+      </div>
+    </div>
+    <div class="about-content">
+      <div class="about-title">
+        ③フォロー機能
+      </div>
+      <i class="far fa-comments fa-5x"></i>
+      <div class="about-body">
+        <p>気になったユーザーをフォローしよう</p>
+        <p>気になったユーザーの投稿がわかる</p>
+        <p>積極的にDMを送ってみよう！！</p>
+      </div>
     </div>
   </div>
-  <div class="about-content">
-    <div class="about-title">
-      ②レビューを受けられる
-    </div>
-    <i class="far fa-laugh-wink fa-5x"></i>
-    <div class="about-body">
-      <p>フィードバックをもらえる！！</p>
-      <p>コメントによる情報共有</p>
-    </div>
+  
+  <h1 class="about-top-title">Let's enjoy Running!</h1>
+  <div class="registration-button">
+    <%= link_to  new_user_registration_path, class: "btn btn-warning btn-lg " do %>
+      <i class="fas fa-user-plus">新規登録はこちら</i>
+    <% end %>
   </div>
-  <div class="about-content">
-    <div class="about-title">
-      ③フォロー機能
-    </div>
-    <i class="far fa-comments fa-5x"></i>
-    <div class="about-body">
-      <p>気になったユーザーをフォローしよう</p>
-      <p>気になったユーザーの投稿がわかる</p>
-      <p>積極的にDMを送ってみよう！！</p>
-    </div>
-  </div>
-</div>
-<h1 class="about-top-title">Let's enjoy Running!</h1>
-<div class="registration-button">
-  <%= link_to '新規登録はこちら！！', new_user_registration_path, class: "btn btn-success btn-lg" %>
-</div>

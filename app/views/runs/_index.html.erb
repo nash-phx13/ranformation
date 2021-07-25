@@ -10,7 +10,7 @@
   </thead>
   <!--投稿内容一覧-->
   <tbody>
-    <% @runs.each do |run| %>
+    <% runs.each do |run| %>
       <tr>
         <td><%= link_to user_path(run.user) do %>
           <%= attachment_image_tag(run.user, :profile_image, :fill, 50, 50, fallback: "no-image-icon.jpg") %>

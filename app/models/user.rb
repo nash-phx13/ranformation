@@ -18,9 +18,9 @@ class User < ApplicationRecord
 
    #is_activeが無効だとログインできない
   def active_for_authentication?
-    super && (self.is_active === false)
+    super && (self.is_active === true)
   end
-  
+
   def liked_by?(run_id)
    likes.where(run_id: run_id).exists?
   end
