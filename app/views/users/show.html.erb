@@ -4,9 +4,12 @@
 </div>
 <div class='container '>
   <div class='row-md-8 offset-md-1'>
-      <h2>投稿一覧</h2>
-      <%= render 'runs/index',runs: @runs %>
+    <h2>投稿一覧</h2>
+    <%= render 'run_index',runs: @runs %>
+    <% if @user == current_user %>
       <h2 class="mt-3">New Run</h2>
       <%= render 'runs/form', run: @run %>
+    <% end %>
   </div>
 </div>
+

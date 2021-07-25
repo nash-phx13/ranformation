@@ -81,3 +81,4 @@ gem 'rubocop-airbnb'
 
 gem 'seed-fu'
 gem 'order_as_specified'
+gem 'chart-js-rails', '~> 0.1.4'

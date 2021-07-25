@@ -18,6 +18,6 @@
 //= require activestorage
 //= require turbolinks
 //= require jquery
-
+//= require Chart.min
 
 //= require_tree

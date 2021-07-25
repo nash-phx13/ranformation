@@ -17,7 +17,6 @@ class RunsController < ApplicationController
   def create
     @run = Run.new(run_params)
     @run.user_id = current_user.id
-    
     tag_list = params[:run][:tag_name].split(nil)
     if @run.save
        @run.save_tag(tag_list)      
