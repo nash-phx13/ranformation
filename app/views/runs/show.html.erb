@@ -1,12 +1,9 @@
-<div class='container'>
+<div class='container '>
   <div class='row'>
     <div class='col-md-3'>
-      <h2>User info</h2>
-      <%= render 'users/info', user: @run.user %>
-      <h2 class="mt-3">New run'srecode</h2>
-      <%= render 'runs/form', run: Run.new %>
+      <%= render 'runs/comment', run: @run,run_comment: @run_comment%>
     </div>
-    <div class='col-md-8 offset-md-1'>
+    <div class='col-md-9'>
       <h2>Run detail</h2>
         <table class='table'>
           <tr>
@@ -15,7 +12,12 @@
               <%= @run.user.name %>
               <% end %>
             </td>
+          </tr>
+            <tr>
             <td><%= link_to @run.title, run_path(@run) %></td>
+            </tr>
+            <tr>
+
             <td><%= @run.body %></td>
             <td><%= attachment_image_tag(@run, :image, size: '100x220', fallback: 'no_image.jpg') %></td>
             <td>
@@ -37,8 +39,7 @@
             <% end %>
           </tr>
         </table>
-      <%= render 'runs/comment', run: @run,run_comment: @run_comment%>
-    </div>
+        </div>
   </div>
 </div>
 

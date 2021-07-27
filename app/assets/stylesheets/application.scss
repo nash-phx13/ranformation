@@ -61,12 +61,6 @@ footer {
 }
 
 
-.logo {
-  margin-top : 5px;
-  padding: 5px;
-  border-radius:  3px;
-  box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.15);
-}
 
 .header_button {
   border-radius:  3px;
@@ -87,11 +81,21 @@ div {
   }
 }
 
+h1 {
+  text-shadow : 2px 2px 1px rgba(0,0,0,0.2);
+}
+
+h2 {
+  text-shadow : 2px 2px 1px rgba(0,0,0,0.2);
+}
+
 .search-form {
   padding: 5px;
   display: flex;
   justify-content: center;
 }
+
+
 
 //topページ
 .top-text {
@@ -99,12 +103,26 @@ div {
 }
 
 .logo-top {
-  size: 200%;
-  margin-top: 100px;
+    text-align: center;
+   font-size:50px;
+  padding: 0.5em 1em;
+    margin: 1em 0;
+    color: #474747;
+    background: whitesmoke;/*背景色*/
+    border-left: double 7px #ffa600;/*左線*/
+    border-right: double 7px #ffa600;/*右線*/
+
+}
+
+.text-run{
+  text-align: center;
+  margin-top: 1em;
 }
 
 .box-top{
-    padding: 0.5em 1em;
+    text-align: center;
+   font-size:50px;
+  padding: 0.5em 1em;
     margin: 2em 0;
     color: #474747;
     background: whitesmoke;/*背景色*/
@@ -117,6 +135,19 @@ div {
    margin: auto;
 }
 
+.box7{
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    color: #474747;
+    background: whitesmoke;/*背景色*/
+    border-left: double 7px #ffa600;/*左線*/
+    border-right: double 7px #ffa600;/*右線*/
+}
+
+.box7 p {
+    margin: 0;
+    padding: 0;
+}
 
 // アバウトページ
 .about-top-title {
@@ -127,23 +158,35 @@ div {
 
 .about-box {
   display: flex;
+   flex-wrap: wrap;
 }
+
 
 .about-box i {
   margin-bottom: 20px;
 }
 
+.about-content-top {
+  text-align: center;
+   background-color: white;
+  padding: 30px;
+  margin: 20px;
+  border-radius: 150px;
+
+}
+
 .about-content {
+  text-align: center;
   background-color: white;
   padding: 30px;
   margin: 20px;
-  border-radius: 15px;
-  text-align: center;
+  border-radius: 150px;
   width: 30%;
 }
 
 .registration-button {
   text-align: center;
+ margin: 20px;
 }
 
 .about-body p {
@@ -158,9 +201,69 @@ div {
 
 //ユーザーページ
 
-  .main_group {
+.main_group {
   padding: 15px;
   border-radius:  7px;
   border: 5px ridge #31A9EE;
   box-shadow: 5px 5px 5px rgba(0,0,0,0.25);
 }
+
+
+
+//tagについて
+.tag {
+    background-color: #FFCCFF;
+    color: #ffffff;
+    margin: 15px;
+    padding: 5px 5px 5px 10px;
+    position: relative;
+}
+
+.tag::before {
+  position: absolute;
+  top: 0;
+  left: -15px;
+  content: '';
+  width: 0;
+  height: 0;
+  border-color: transparent #f96781 transparent transparent;
+  border-style: solid;
+  border-width: 13px 15px 13px 0;
+}
+
+.tag::after {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 2;
+  display: block;
+  content: '';
+  width: 6px;
+  height: 6px;
+  margin-top: -3px;
+  background-color: #fff;
+  border-radius: 100%;
+}
+
+
+// ページネーションのCSS
+.pagination {
+  justify-content: center;
+}
+
+.pagination>li>a {
+  border: none;     /*枠線をなくす*/
+  color: #696969;   /*文字の色を変える*/
+}
+
+/* 表示しているページ番号のデザイン */
+.pagination>.active>a {
+  background: #93c9ff;     /*背景の色を変える*/
+  border-radius: 10px;     /*角を丸くする*/
+}
+
+/*ホバー時のデザイン*/
+.pagination>li>a:hover {
+  border-radius: 10px;    /*角を丸くする*/
+}
+

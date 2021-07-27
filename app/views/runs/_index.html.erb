@@ -1,15 +1,16 @@
 
-<table class='table table-hover table-inverse'>
+<table class='table table-hover'>
   <thead>
     <tr>
       <th></th>
       <th>Title</th>
       <th>Opinion</th>
-      <th colspan="3"></th>
+      <th>いいね数</th>
+      <th>コメント</th>
     </tr>
   </thead>
   <!--投稿内容一覧-->
-  <tbody>
+ <tbody>
     <% runs.each do |run| %>
       <tr>
         <td><%= link_to user_path(run.user) do %>
@@ -26,3 +27,7 @@
     <% end %>
   </tbody>
 </table>
+
+  <div class='pagination'>
+    <%= paginate runs %>
+  </div>

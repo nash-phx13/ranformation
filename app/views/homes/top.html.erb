@@ -1,9 +1,9 @@
 <div class="container">
   <div class="row">
-    <div class='text-center  col-12 '>
-      <div class="logo-top">
-        <%= image_tag("logo.png",:width => "500",:height => "100") %>
-      </div>
+    <div class='col-12 '>
+      <h1 class="logo-top">
+        <i class="fas fa-running fa-lg"></i>Runformation
+      </h1>
  <!--サンプルでスライドショー-->
       <div id='carouselExampleIndicators' class='carousel slide carousel-fade ' data-ride='carousel'>
         <ol class='carousel-indicators'>
@@ -50,17 +50,19 @@
     </div>
   </div>
   <div class="row">
-    <div class='text-center  col-12 '>
-    <h1 class="top-text" >走った経験を活かしませんか？</h1>
+    <div class='logo-top col-12 '>
+    <h1 >走った経験を活かしませんか？</h1>
     </div>
   </div>
   <div class="box-top row">
-    <h4 class="top-text">
+    <div class='col-12 '>
+      <h4>
           あなたのランニング経験が誰かの役に立つ。<br>
           自分のランニング記録に活用することにもできますが、<br>
           本サイトはその経験が同じランナーを勇気づけるものになることを第一に望んでいます。<br>
           さぁ、あなたの経験を共有しましょう！
-    </h4>
+      </h4>
+    </div>
   </div>
         <div class="btn-wrapper col-10 mx-auto">
           <div class="row">
@@ -80,9 +82,9 @@
 
   <div class="container">
     <div class="row">
-      <div class="text-center col-10 mx-auto" >
+      <div class="col-10 mx-auto" >
         <%= link_to home_about_path,class: "btn btn-secondary btn-lg btn-block"  do %>
-        <h2>Runformationとは <%= image_tag("about.png", size: "30x30") %></h2><br>
+        <h2 class="text-run">Runformationとは <%= image_tag("about.png", size: "30x30") %></h2><br>
         <% end %>
       </div><br>
     </div><br>

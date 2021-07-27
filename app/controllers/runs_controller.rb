@@ -9,24 +9,26 @@ class RunsController < ApplicationController
   end
 
   def index
-    @runs = Run.all
-    @run = Run.new 
+    runs = Run.includes(:liked_users).sort {|a,b| b.liked_users.size <=> a.liked_users.size}
+    @runs = Kaminari.paginate_array(runs).page(params[:page]).per(3)
+
+    @run = Run.new
     @tag_list = Tag.all
   end
 
   def create
     @run = Run.new(run_params)
     @run.user_id = current_user.id
-    tag_list = params[:run][:tag_name].split(nil)
+    tag_list = params[:run]
     if @run.save
-       @run.save_tag(tag_list)      
+       @run.save_tag(tag_list)
        redirect_to run_path(@run), notice: "You have created run recode successfully."
     else
       @runs = Run.all
       render 'index'
     end
   end
-  
+
 
 
   def edit
@@ -35,7 +37,7 @@ class RunsController < ApplicationController
 
   def update
     @run =Run.find(params[:id])
-    tag_list = params[:run][:tag_name]
+    tag_list = params[:run]
     if @run.update(run_params)
        @run.save_tag(tag_list)
        redirect_to run_path(@run), notice: "You have updated run recode successfully."
