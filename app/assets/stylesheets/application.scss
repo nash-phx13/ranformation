@@ -249,9 +249,14 @@ h2 {
 // ページネーションのCSS
 .pagination {
   justify-content: center;
+
+  border-radius: 10px;     /*角を丸くする*/
+   border: none;     /*枠線をなくす*/
+  color: #696969;  
+
 }
 
-.pagination>li>a {
+.pagination > li > a {
   border: none;     /*枠線をなくす*/
   color: #696969;   /*文字の色を変える*/
 }

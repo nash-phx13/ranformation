@@ -6,6 +6,8 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @runs = @user.runs
     @run = Run.new
+    @runs = @runs.page(params[:page]).per(3)
+   
   end
 
   def index

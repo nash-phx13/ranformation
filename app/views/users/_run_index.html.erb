@@ -26,6 +26,9 @@
     <% end %>
   </tbody>
 </table>
+  <div class="pagination">
+    <%= paginate runs %></br>
+  </div>
 
 <h4>7日間分の投稿数</h4>
   <table class='table table-bordered'>
@@ -64,11 +67,11 @@
             {
               label: '投稿数',
               data: [<%= runs.created_6day_ago.count %>,
-                     <%= runs.created_5day_ago.count %>, 
-                     <%= runs.created_4day_ago.count %>, 
-                     <%= runs.created_3day_ago.count %>, 
-                     <%= runs.created_2day_ago.count %>, 
-                     <%= runs.created_yesterday.count %>, 
+                     <%= runs.created_5day_ago.count %>,
+                     <%= runs.created_4day_ago.count %>,
+                     <%= runs.created_3day_ago.count %>,
+                     <%= runs.created_2day_ago.count %>,
+                     <%= runs.created_yesterday.count %>,
                      <%= runs.created_today.count %>],
               borderColor: "rgba(0,0,255,1)",
               backgroundColor: "rgba(0,0,0,0)"

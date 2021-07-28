@@ -60,7 +60,7 @@ class RunsController < ApplicationController
   private
 
   def run_params
-    params.require(:run).permit(:title, :body, {tag_ids:[] })
+    params.require(:run).permit(:title, :body,:image, tag_ids: [])
   end
 
   def check_correct_user
