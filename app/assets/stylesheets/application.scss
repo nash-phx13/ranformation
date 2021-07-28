@@ -122,8 +122,8 @@ h2 {
 .box-top{
     text-align: center;
    font-size:50px;
-  padding: 0.5em 1em;
-    margin: 2em 0;
+  padding: 1em 1em;
+    margin: 0.5em 0;
     color: #474747;
     background: whitesmoke;/*背景色*/
     border-left: double 7px #ffa600;/*左線*/
@@ -158,7 +158,7 @@ h2 {
 
 .about-box {
   display: flex;
-   flex-wrap: wrap;
+   margin: auto;
 }
 
 
@@ -179,9 +179,9 @@ h2 {
   text-align: center;
   background-color: white;
   padding: 30px;
-  margin: 20px;
+  margin: 30px;
   border-radius: 150px;
-  width: 30%;
+  width: 50%;
 }
 
 .registration-button {
@@ -202,13 +202,21 @@ h2 {
 //ユーザーページ
 
 .main_group {
+  margin: 15px;
   padding: 15px;
   border-radius:  7px;
   border: 5px ridge #31A9EE;
   box-shadow: 5px 5px 5px rgba(0,0,0,0.25);
 }
 
-
+//投稿ページ
+.ranking-group{
+  margin: 15px;
+  padding: 15px;
+  border-radius:  7px;
+  border: 5px ridge #FF8C00;
+  box-shadow: 5px 5px 5px rgba(255,140,0,0.25);
+}
 
 //tagについて
 .tag {
@@ -245,6 +253,14 @@ h2 {
   border-radius: 100%;
 }
 
+.tag-group{
+  margin: 15px;
+  padding: 15px;
+  border-radius:  7px;
+  border: 5px ridge #FFC0CB;
+  box-shadow: 5px 5px 5px rgba(216,191,216,0.5);
+
+}
 
 // ページネーションのCSS
 .pagination {
@@ -252,7 +268,7 @@ h2 {
 
   border-radius: 10px;     /*角を丸くする*/
    border: none;     /*枠線をなくす*/
-  color: #696969;  
+  color: #696969;
 
 }
 

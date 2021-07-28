@@ -1,18 +1,18 @@
-<div class='bg-dark text-white'>
-  <div class='container'>
-    <div class='row'>
-      <div class='mx-auto text-center'>
-        <p>Copyright © 2021 Runformation All Rights Reserved.</p>
-      </div>
-      <div class='mx-auto text-right'>
-        <ul class='navbar-nav ml-auto'>
-          <% if user_signed_in? %>
-            <li><%= link_to ' Mypageへ',user_path(current_user),class: 'fas fa-home nav-link text-light' %></li>
-          <% else %>
-            <li><%= link_to "Topへ", root_path,class:"fas fa-home nav-link text-light" %></li>
-          <% end %>
-       </ul>
+  <div class='bg-dark text-white'>
+    <div class='container'>
+      <div class='row'>
+        <div class='mx-auto text-center'>
+          <p>Copyright © 2021 Runformation All Rights Reserved.</p>
+        </div>
+        <div class='mx-auto text-right'>
+          <ul class='navbar-nav ml-auto'>
+            <% if user_signed_in? %>
+              <li><%= link_to ' Mypageへ',user_path(current_user),class: 'fas fa-home nav-link text-light' %></li>
+            <% else %>
+              <li><%= link_to "Topへ", root_path,class:"fas fa-home nav-link text-light" %></li>
+            <% end %>
+         </ul>
+        </div>
       </div>
     </div>
   </div>
-</div>

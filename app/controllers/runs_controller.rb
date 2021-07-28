@@ -10,8 +10,7 @@ class RunsController < ApplicationController
 
   def index
     runs = Run.includes(:liked_users).sort {|a,b| b.liked_users.size <=> a.liked_users.size}
-    @runs = Kaminari.paginate_array(runs).page(params[:page]).per(3)
-
+    @runs = Kaminari.paginate_array(runs).page(params[:page]).per(10)
     @run = Run.new
     @tag_list = Tag.all
   end
@@ -58,7 +57,6 @@ class RunsController < ApplicationController
   end
 
   private
-
   def run_params
     params.require(:run).permit(:title, :body,:image, tag_ids: [])
   end

@@ -1,34 +1,28 @@
-
-<table class='table table-hover'>
-  <thead>
-    <tr>
-      <th></th>
-      <th>Title</th>
-      <th>Opinion</th>
-      <th>いいね数</th>
-      <th>コメント</th>
-    
-    </tr>
-  </thead>
-  <!--投稿内容一覧-->
- <tbody>
-    <% runs.each do |run| %>
-      <tr>
-        <td><%= link_to user_path(run.user) do %>
-          <%= attachment_image_tag(run.user, :profile_image, :fill, 50, 50, fallback: "no-image-icon.jpg") %>
-          <% end %>
-        </td>
-        <td><%= link_to run.title, run_path(run), class: "run_#{run.id}" %></td>
-        <td><%= run.body %></td>
-        <td id="likes_buttons_<%= run.id %>">
-          <%= render partial: 'likes/like-btn', locals:{run: run} %>
-        </td>
-        <td>コメント数: <%= run.run_comments.count %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-  <!--div class="pagination">
-    <!%= paginate runs %>
+  <div class="ranking-group">
+    <table class='table table-hover'>
+      <thead>
+        <tr>
+          <th></th>
+          <th>タイトル</th>
+          <th>いいね数</th>
+          <th>コメント</th>
+        </tr>
+      </thead>
+      <!--投稿内容一覧-->
+     <tbody>
+        <% runs.each do |run| %>
+          <tr>
+            <td><%= link_to user_path(run.user) do %>
+              <%= attachment_image_tag(run.user, :profile_image, :fill, 50, 50, fallback: "no-image-icon.jpg") %>
+              <% end %>
+            </td>
+            <td><%= link_to run.title, run_path(run), class: "run_#{run.id}" %></td>
+            <td id="likes_buttons_<%= run.id %>">
+              <%= render partial: 'likes/like-btn', locals:{run: run} %>
+            </td>
+            <td>コメント数: <%= run.run_comments.count %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
   </div>

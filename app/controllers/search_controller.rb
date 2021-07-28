@@ -8,6 +8,7 @@ class SearchController < ApplicationController
     @records = search_for(@model, @content, @method)
   end
 
+
   private
   def search_for(model, content, method)
 

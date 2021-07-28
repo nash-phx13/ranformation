@@ -1,16 +1,16 @@
-<div class='container px-5 px-sm-0'>
-  <%= render 'layouts/errors', obj: @run %>
-  <div class='row'>
-    <div class='col-md-3 '>
-      <h2><i class="fas fa-tag"></i> タグリスト</h2>
-       <%= render 'tags/index', tags: @tag_list %>
-    </div>
-    <div class='text-center col-md-9 '>
-      <h2>ランニング記事一覧</h2>
-      <h4 >
-        <i class="fas fa-crown "></i> いいねランキング
-      </h4>
-      <%= render 'index', runs: @runs%>
+  <div class='container px-5 px-sm-0'>
+    <%= render 'layouts/errors', obj: @run %>
+    <div class='row'>
+      <div class='col-md-3 '>
+        <h2><i class="fas fa-tag"></i> タグリスト</h2>
+         <%= render 'tags/index', tags: @tag_list %>
+      </div>
+      <div class='text-center col-md-9 '>
+        <h2>ランニング記事一覧</h2>
+        <h4 >
+          <i class="fas fa-crown "></i> いいねランキング
+        </h4>
+        <%= render 'index', runs: @runs%>
+      </div>
     </div>
   </div>
-</div>

@@ -9,6 +9,7 @@ class Run < ApplicationRecord
   validates :title, presence: true
   validates :body, presence: true, length: { maximum: 200 }
   attachment :image
+ 
 
   # 引数で渡されたユーザidがLikeテーブル内に存在（exists?）するかの判断
   def liked_by?(user)

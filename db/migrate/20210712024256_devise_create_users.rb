@@ -4,7 +4,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.2]
   def change
     create_table :users do |t|
       ## Database authenticatable
-     
+
       t.string :email,              null: false, default: "" #メールアドレス
       t.string :encrypted_password, null: false, default: "" #暗号化されたパスワード
 
@@ -34,8 +34,18 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.2]
       # t.datetime :locked_at
 
       t.string :name
-      
-      t.timestamps null: false
+
+    t.timestamps null: false
+
+
+
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "profile_image_id"
+    t.text "introduction"
+    t.boolean "is_active", default: true
+
+
     end
 
     add_index :users, :email,                unique: true

@@ -1,13 +1,15 @@
-  <table class='table table-hover table-inverse'>
-     <tbody>
-      <% Tag.all.each do |list| %>
-        <tr>
-          <th>
-              <span class="tag">
-           <%= link_to "#{list.tag_name}(#{list.runs.count})",tag_runs_path(tag_id: list.id) %>
-           </span>
-          </th>
-        </tr>
-      <% end %>
-  </tbody>
-</table>
+  <div class="tag-group">
+    <table class='table table-hover table-inverse'>
+      <tbody>
+        <% Tag.all.each do |list| %>
+          <tr>
+            <th>
+                <span class="tag">
+             <%= link_to "#{list.tag_name}(#{list.runs.count})",tag_runs_path(tag_id: list.id) %>
+             </span>
+            </th>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>

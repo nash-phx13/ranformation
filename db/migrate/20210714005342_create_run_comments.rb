@@ -4,8 +4,9 @@ class CreateRunComments < ActiveRecord::Migration[5.2]
       t.text :comment
       t.integer :user_id
       t.integer :run_id
-
+      t.float :evaluation
       t.timestamps
     end
   end
 end
+
