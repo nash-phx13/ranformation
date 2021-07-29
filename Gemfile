@@ -39,6 +39,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'pry-byebug', group: :development
 end
 
 group :development do
@@ -76,7 +77,7 @@ gem 'font-awesome-sass'
 gem 'enum_help'
 gem 'rails-i18n'
 
-gem 'pry-byebug', group: :development
+
 gem 'rubocop-airbnb'
 
 gem 'seed-fu'
