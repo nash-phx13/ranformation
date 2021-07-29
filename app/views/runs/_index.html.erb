@@ -1,5 +1,5 @@
   <div class="ranking-group">
-    <table class='table table-hover'>
+    <table class="table table-hover">
       <thead>
         <tr>
           <th></th>
@@ -18,7 +18,7 @@
             </td>
             <td><%= link_to run.title, run_path(run), class: "run_#{run.id}" %></td>
             <td id="likes_buttons_<%= run.id %>">
-              <%= render partial: 'likes/like-btn', locals:{run: run} %>
+              <%= render partial: "likes/like-btn", locals:{run: run} %>
             </td>
             <td>コメント数: <%= run.run_comments.count %></td>
           </tr>
