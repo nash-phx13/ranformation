@@ -1,4 +1,4 @@
-# [Runformatiton](https://runformation.net/)
+# Runformatiton
 
 ### サイト概要
 ランニングブログ共有サイト  
